@@ -21,9 +21,9 @@ public function tambah()
 {
 
 	// memanggil view tambah
-    $pegawai = DB::table('pegawai')->get();
+    $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
 
-	return view('absen.tambah', ['pegawai'=>$pegawai]);
+	return view('absen.tambah', ['pegawai' => $pegawai]);
 
 }
 // method untuk insert data ke table pegawai
@@ -32,7 +32,6 @@ public function store(Request $request)
         //DB::table()->insert();
         // insert data ke table pegawai
         DB::table('absen')->insert([
-            'ID' => $request->ID,
             'IDPegawai' => $request->IDPegawai,
             'Tanggal' => $request->tanggal,
             'Status' => $request->status
@@ -45,10 +44,13 @@ public function edit($id)
 {
 	// mengambil data pegawai berdasarkan id yang dipilih
 	$absen = DB::table('absen')->where('ID',$id)->get();
-    $pegawai = DB::table('pegawai')->get();
 
-    // passing data pegawai yang didapat ke view edit.blade.php
-	return view('absen.edit',['absen' => $absen, 'pegawai'=>$pegawai]);
+    $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+
+    $judul = "Haloo Apa Kabar" ;
+
+	// passing data pegawai yang didapat ke view edit.blade.php
+	return view('absen.edit',['absen' => $absen,'pegawai' => $pegawai,'judul' => $judul]);
 }
 // update data pegawai
 public function update(Request $request)

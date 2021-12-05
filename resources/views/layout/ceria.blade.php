@@ -12,8 +12,14 @@
 		<script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/e8bddc60e73c1ec2475f827be36e1957af72e2ea/src/js/bootstrap-datetimepicker.js"></script>
 
 </head>
-<body class="container m-4">
+<style>
+    body{background-color:aqua;}
+</style>
+<body>
+    @include('layout/header')
+    <div class="container m-4">
     @section('isikonten')
+    </div>
     @show
 </body>
 </html>

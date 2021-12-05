@@ -30,7 +30,7 @@
                 </div>
                 <script type="text/javascript">
                     $(function () {
-                        $('#dtpickerdemo').datetimepicker({format : "YYYY-MM-DD hh:mm", "defaultDate":new Date() });
+                        $('#dtpickerdemo').datetimepicker({format : "YYYY-MM-DD hh:mm:ss", "defaultDate":new Date(), locale : 'id', showTodayButton: false });
                     });
                 </script>
                 <br>
