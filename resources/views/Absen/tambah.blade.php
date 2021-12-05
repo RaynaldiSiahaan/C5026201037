@@ -14,13 +14,14 @@
 
 	<form action="/absen/store" method="post">
 		{{ csrf_field() }}
-		Pegawai <select id="IDPegawai" name="IDPegawai" required="required">
+        <div class="form-group">
+		<div class='col-sm-1'><b>Pegawai :</b></div> <select id="IDPegawai" name="IDPegawai" required="required">
             @foreach($pegawai as $p)
                 <option value="{{ $p->pegawai_id }}"> {{ $p->pegawai_nama }}</option>
             @endforeach
-        </select><br>
+        </select></div>
             <div class="form-group">
-                <label for="dtpickerdemo" class="col-sm-2 control-label">Tanggal :</label>
+                <label for="dtpickerdemo" class="col-sm-1 control-label">Tanggal :</label>
                     <div class='col-sm-4 input-group date ' id='dtpickerdemo'>
                         <input type='text' class="form-control" name="tanggal" />
                         <span class="input-group-addon">
@@ -30,16 +31,29 @@
                 </div>
                 <script type="text/javascript">
                     $(function () {
-                        $('#dtpickerdemo').datetimepicker({format : "YYYY-MM-DD hh:mm:ss", "defaultDate":new Date(), locale : 'id', showTodayButton: false });
+                        $('#dtpickerdemo').datetimepicker({format : "YYYY-MM-DD hh:mm", "defaultDate":new Date() });
                     });
                 </script>
-                <br>
-            Status
-        <input type="radio" id="hadir" name="status" value="H">
+        <div class="form-group">
+        <div class='col-sm-1'>
+            <b>Status   &nbsp :</b>
+        </div>
+
+        <input type="radio" id="hadir" name="status" value="H" >
+
   <label for="hadir">HADIR</label><br>
-  <input type="radio" id="tidak" name="status" value="T" checked="checked">
+
+  <span class="col-sm-1"></span><input type="radio" id="tidak" name="status" value="T" checked="checked" >
+
   <label for="tidak">TIDAK HADIR</label><br>
+        </div>
+
+        <div class="form-group">
+        <div class='col-sm-4'>
 		<input type="submit" value="Simpan Data">
+        </div>
+    </div>
+
 	</form>
 
 @endsection
