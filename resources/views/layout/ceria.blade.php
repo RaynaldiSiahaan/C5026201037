@@ -13,13 +13,15 @@
 
 </head>
 <style>
-    body{background-color:aqua;}
+    body{background-color:aqua;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 </style>
 <body>
     @include('layout/header')
     <div class="container m-4">
     @section('isikonten')
     </div>
+    @include('layout/footer')
     @show
 </body>
 </html>

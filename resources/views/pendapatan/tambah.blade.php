@@ -1,10 +1,8 @@
-<html>
-<head>
-	<title>Tambah data pendapatan</title>
-</head>
-<body>
+@extends('layout.ceria')
 
+@section('title', 'TAMBAH PENDAPATAN')
 
+@section('isikonten')
 	<h3>Data Pendapatan</h3>
 
 	<a href="/pendapatan"> Kembali</a>
@@ -22,5 +20,4 @@
         <input type="submit" value="Simpan Data">
 	</form>
 
-</body>
-</html>
+@endsection

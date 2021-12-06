@@ -6,7 +6,7 @@
 
 @section('judulhalaman', 'EDIT ABSEN')
 
-<h1>{{ $judul }}</h1>
+<h2>Edit data Pegawai</h2>
 	@foreach($absen as $p)
 	<form action="/absen/update" method="post">
 		{{ csrf_field() }}

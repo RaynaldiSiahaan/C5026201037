@@ -1,13 +1,8 @@
-<html>
-<head>
-	<title>Edit Data</title>
-</head>
-<body>
+@extends('layout.ceria')
 
-	<h3>Edit Pendapatan</h3>
+@section('title', 'EDIT PENDAPATAN')
 
-	<a href="/pegawai"> Kembali</a>
-
+@section('isikonten')
 	<br/>
 	<br/>
 
@@ -23,7 +18,5 @@
         <input type="submit" value="Simpan Data">
 	</form>
 	@endforeach
+@endsection
 
-
-</body>
-</html>
