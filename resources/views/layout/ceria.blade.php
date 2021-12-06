@@ -17,11 +17,25 @@
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 </style>
 <body>
-    @include('layout/header')
-    <div class="container m-4">
+    <header class="row">
+        @include('layout/header')
+        </header>
+
+<div >
+
+    <div id="sidebar" class="col-md-2" style="background-color:pink; height:1000px">
+        @include('layout/sidebar')
+    </div>
+
+    <div id="content" class="col-md-10">
     @section('isikonten')
     </div>
+
+
+</div>
+<footer class="row">
     @include('layout/footer')
+    </footer>
     @show
 </body>
 </html>
