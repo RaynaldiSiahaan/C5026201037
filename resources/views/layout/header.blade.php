@@ -1,6 +1,5 @@
 <div class="row" style="background:red;">
-    <div class="col-sm-1">
-<img src="pasfoto.jpg" style="float:left"></div>
+<img class="col-sm-1" src="{{ URL::asset('pasfoto.jpg}') }}" style="float:left">
 
 <div class="col-sm-11">
 Nama : Raynaldi Anggiat Samuel Siahaan <br>
