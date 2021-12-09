@@ -19,9 +19,9 @@
         font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 </style>
 <body>
-    <header class="row">
+
         @include('layout/header')
-        </header>
+
 
 <div >
 
@@ -33,11 +33,10 @@
     @section('isikonten')
     </div>
 
+    @include('layout/footer')
 
 </div>
-<footer class="row">
-    @include('layout/footer')
-    </footer>
+
     @show
 </body>
 </html>
