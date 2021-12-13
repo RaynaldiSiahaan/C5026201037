@@ -4,8 +4,9 @@
 
 @section('isikonten')
 
+<div class="container m-4">
 
-	<h3>Edit Pegawai</h3>
+	<h1>Edit Pegawai</h1>
 
 	<a href="/pegawai"> Kembali</a>
 
@@ -25,6 +26,7 @@
 	</form>
 
 	@endforeach
+</div>
     @endsection
 
 

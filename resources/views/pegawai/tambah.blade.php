@@ -3,8 +3,9 @@
 @section('title', 'TAMBAH PEGAWAI')
 
 @section('isikonten')
+<div class="container m-4">
 
-	<h3>Data Pegawai</h3>
+	<h1>Data Pegawai</h1>
 
 	<a href="/pegawai"> Kembali</a>
 
@@ -19,4 +20,5 @@
 		Alamat <textarea name="alamat" required="required"></textarea> <br/>
 		<input type="submit" value="Simpan Data">
 	</form>
+</div>
 @endsection

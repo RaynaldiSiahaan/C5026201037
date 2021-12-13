@@ -1,18 +1,20 @@
-<html>
-<head>
-	<title>Tabel Pendapatan</title>
-</head>
-<body>
+@extends('layout.ceria')
 
-	<h2>5026201037-Raynaldi Siahaan</h2>
-	<h3>Tabel Pendapatan</h3>
+@section('title', 'PENDAPATAN PEGAWAI')
 
-	<a href="/pendapatan/tambah"> + Tambah Data Pendapatan</a>
+@section('isikonten')
+
+<div class="container m-4">
+
+	<h1>Tabel Pendapatan</h1>
+
+	<a href="/pendapatan/tambah" class="btn btn-info"> + Tambah Data Pendapatan</a>
 
 	<br/>
 	<br/>
 
-	<table border="1">
+	<table class="table table-success table-striped table-bordered">
+        <thead>
 		<tr>
 			<th>ID</th>
 			<th>Bulan</th>
@@ -21,7 +23,9 @@
 			<th>Jumlah Tunjangan</th>
             <th>Opsi</th>
 		</tr>
+    </thead>
 		@foreach($pendapatan as $p)
+        <tbody>
 		<tr>
 			<td>{{ $p->IDPegawai }}</td>
 			<td>{{ $p->Bulan }}</td>
@@ -29,14 +33,15 @@
 			<td>{{ $p->Gaji }}</td>
             <td>{{ $p->Tunjangan }}</td>
 			<td>
-				<a href="/pendapatan/edit/{{ $p->ID }}">Edit</a>
+				<a href="/pendapatan/edit/{{ $p->ID }}" class="btn btn-warning">Edit</a>
 				|
-				<a href="/pendapatan/hapus/{{ $p->ID }}">Hapus</a>
+				<a href="/pendapatan/hapus/{{ $p->ID }}" class="btn btn-danger">Hapus</a>
 			</td>
 		</tr>
+    </tbody>
 		@endforeach
 	</table>
 
 
-</body>
-</html>
+</div>
+@endsection

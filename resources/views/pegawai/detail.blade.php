@@ -1,11 +1,12 @@
 @extends('layout.ceria')
 
-@section('title', 'EDIT PEGAWAI')
+@section('title', 'DETAIL PEGAWAI')
 
 @section('isikonten')
 
+<div class="container m-4">
 
-	<h3>Edit Pegawai</h3>
+	<h1>DETAIL Pegawai</h1>
 
 	<a href="/pegawai"> Kembali</a>
 
@@ -20,6 +21,7 @@
 
 
 	@endforeach
+</div>
     @endsection
 
 

@@ -4,8 +4,8 @@
 
 @section('isikonten')
 
-	<h2><a href="https://www.malasngoding.com"></a></h2>
-	<h3>Absen Pegawai</h3>
+<div class="container m-4">
+	<h1>Absen Pegawai</h1>
 
 	<a href="/absen"> Kembali</a>
 
@@ -55,6 +55,6 @@
     </div>
 
 	</form>
-
+</div>
 @endsection
 

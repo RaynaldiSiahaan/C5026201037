@@ -3,7 +3,9 @@
 @section('title', 'TAMBAH PENDAPATAN')
 
 @section('isikonten')
-	<h3>Data Pendapatan</h3>
+<div class="container m-4">
+
+	<h1>Data Pendapatan</h1>
 
 	<a href="/pendapatan"> Kembali</a>
 
@@ -19,5 +21,5 @@
 		Tunjangan <input type="number" name="tunjangan" required="required"><br/>
         <input type="submit" value="Simpan Data">
 	</form>
-
+</div>
 @endsection

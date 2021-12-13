@@ -4,9 +4,9 @@
 
 @section('isikonten')
 
-@section('judulhalaman', 'EDIT ABSEN')
+<div class="container m-4">
 
-<h2>Edit data Pegawai</h2>
+<h1>Edit absensi Pegawai</h1>
 	@foreach($absen as $p)
 	<form action="/absen/update" method="post">
 		{{ csrf_field() }}
@@ -41,5 +41,5 @@
 	</form>
 	@endforeach
 
-
+</div>
     @endsection

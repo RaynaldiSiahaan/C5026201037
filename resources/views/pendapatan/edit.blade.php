@@ -3,8 +3,8 @@
 @section('title', 'EDIT PENDAPATAN')
 
 @section('isikonten')
-	<br/>
-	<br/>
+<div class="container m-4">
+<h1> EDIT PENDAPATAN </h1>
 
 	@foreach($pendapatan as $p)
 	<form action="/pendapatan/update" method="post">
@@ -18,5 +18,6 @@
         <input type="submit" value="Simpan Data">
 	</form>
 	@endforeach
+</div>
 @endsection
 
