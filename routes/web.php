@@ -56,3 +56,12 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+
+Route::get('/praktikum','PraktikumController@index');
+Route::get('/praktikum/cari','PraktikumController@cari');
+Route::get('/praktikum/tambah','PraktikumController@tambah');
+Route::post('/praktikum/store','PraktikumController@store');
+Route::get('/praktikum/edit/{id}','PraktikumController@edit');
+Route::post('/praktikum/update','PraktikumController@update');
+Route::get('/praktikum/hapus/{id}','PraktikumController@hapus');
+Route::get('praktikum/detail/{id}', 'PraktikumController@detail');

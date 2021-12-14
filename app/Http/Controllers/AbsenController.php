@@ -10,7 +10,7 @@ class AbsenController extends Controller
     public function index()
     {
     	// mengambil data dari table pegawai
-    	//$absen = DB::table('absen')->get();
+    	$absen = DB::table('absen')->get();
 
         $absen = DB::table('absen')
        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
@@ -53,7 +53,6 @@ public function edit($id)
 
     $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
 
-    $judul = "Haloo Apa Kabar" ;
 
 	// passing data pegawai yang didapat ke view edit.blade.php
 	return view('absen.edit',['absen' => $absen,'pegawai' => $pegawai,'judul' => $judul]);

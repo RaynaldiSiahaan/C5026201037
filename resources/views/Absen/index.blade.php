@@ -16,7 +16,7 @@
 	<table class="table table-success table-striped table-bordered">
     <thead>
 		<tr>
-			<th scope="col">ID</th>
+			<th scope="col">Nama Pegawai</th>
 			<th scope="col">ID Pegawai</th>
 			<th scope="col">Tanggal</th>
 			<th scope="col">Status</th>
