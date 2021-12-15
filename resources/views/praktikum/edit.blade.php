@@ -8,15 +8,15 @@
 
 	<h1>Edit Data</h1>
 
-	<a href="/pendapatan"> Kembali</a>
+	<a href="/praktikum"> Kembali</a>
 
 	<br/>
 	<br/>
 
-	@foreach($pegawai as $p)
-	<form action="/pendapatan/update" method="post">
+	@foreach($praktikum as $p)
+	<form action="/praktikum/update" method="post">
 		{{ csrf_field() }}
-		<input type="hidden" name="id" value="{{ $p->pegawai_id }}"> <br/>
+		<input type="hidden" name="id" value="{{ $p->kodesepatu }}"> <br/>
 		Merk Sepatu <input type="text" required="required" name="merk" value="{{ $p->merksepatu }}"> <br/>
 		Jumlah Stock <input type="number" required="required" name="stock" value="{{ $p->stocksepatu }}"> <br/>
 		Ketersediaan <input type="text" required="required" name="tersedia" value="{{ $p->tersedia }}"> <br/>
